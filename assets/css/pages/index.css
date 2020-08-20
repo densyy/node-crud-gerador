@@ -1,3 +1,118 @@
+/*
+* Geral
+*/
+
+/* Cores */
+
+:root {
+  --color-primary: #673AB7;
+  --color-accent: #009688;
+  --color-white: #FFFFFF;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font */
+
 body {
-  background-color: red;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*
+* Section Entradas
+*/
+
+section#entradas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+}
+
+section#entradas h1 {
+  color: var(--color-white);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section#entradas .grupo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+section#entradas .grupo label {
+  width: 100%;
+  color: var(--color-white);
+  margin-right: 10px;
+  text-align: right;
+  flex-grow: 1;
+}
+
+section#entradas .grupo input {
+  width: 100%;
+  flex-grow: 1;
+}
+
+section#entradas button#gerar,
+section#entradas button#gerar:hover,
+section#entradas button#gerar:active {
+  width: 100px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+section#entradas button#gerar:focus {
+  outline: none;
+}
+
+/*
+* Section Resultados
+*/
+
+section#resultados {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-accent);
+}
+
+section#resultados .grupo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+section#resultados .grupo label {
+  color: var(--color-white);
+  text-align: center;
+  padding: 10px 0;
+}
+
+section#resultados .grupo textarea {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 1px dashed var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-accent);
 }

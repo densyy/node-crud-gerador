@@ -3,7 +3,7 @@ export default () => {
 
   // Internal Variables
 
-  const __section = document.querySelector('section#entradas')
+  const __section = document.querySelector('header')
   const __inputMaiusculoPlural = __section.querySelector('input#maiusculoPlural')
   const __inputMinusculoPlural = __section.querySelector('input#minusculoPlural')
   const __inputMinusculoPluralAcentuado = __section.querySelector('input#minusculoPluralAcentuado')

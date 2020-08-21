@@ -11,7 +11,8 @@ export default () => {
 
   // Internal Variables
 
-  const __buttonGerar = document.querySelector('section#entradas button#gerar')
+  const __buttonGerar = document.querySelector('header button#gerar')
+  const __buttonFechar = document.querySelector('section.modal button#fechar')
 
   // Methods
 
@@ -29,6 +30,19 @@ export default () => {
       sectionResultados().importarArquivoRoute(arquivoRoute)
       sectionResultados().importarArquivoController(arquivoController)
       sectionResultados().importarArquivoRepository(arquivoRepository)
+
+      const modal = document.querySelector('section.modal')
+
+      modal.classList.add('aberto')
+    })
+  }
+
+  methods.fecharResultados = () => {
+    __buttonFechar.addEventListener('click', () => {
+
+      const modal = document.querySelector('section.modal')
+
+      modal.classList.remove('aberto')
     })
   }
 

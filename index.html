@@ -14,70 +14,78 @@
 
 <body>
 
-  <main>
-    <section id="entradas">
-      <h1>Defina a Entidade</h1>
-      <div class="grupo">
-        <label>Maiúsculo Plural: </label>
-        <input type="text" id="maiusculoPlural" placeholder="PERMISSOES">
+  <header>
+    <div class="titulo">
+      <h1>Node Crud Gerador</h1>
+      <p>Essa é uma ferramenta capaz de gerar os arquivos de um crud de forma padronizada. Os arquivos gerados consistem em: routes, controllers e repositories. A principal finalidade do projeto é automatizar a criação de scripts repetitivos.</p>
+      <p>Os arquivos gerados são um modelo básico para manipular os dados do MongoDB utilizando o Node e o framework Express. Lembrando que esses arquivos são apenas o esboço de um crud, incremente-os você mesmo de acordo com suas demandas.</p>
+    </div>
+    <div class="entidade">
+      <div class="linha">
+        <div class="grupo">
+          <label>Maiúsculo Plural:</label>
+          <input spellcheck="false" type="text" id="maiusculoPlural" placeholder="PERMISSOES">
+        </div>
+        <div class="grupo">
+          <label>Minúsculo Plural:</label>
+          <input spellcheck="false" type="text" id="minusculoPlural" placeholder="permissoes">
+        </div>
+      </div>
+      <div class="linha">
+        <div class="grupo">
+          <label>Minúsculo Plural Acentuado:</label>
+          <input spellcheck="false" type="text" id="minusculoPluralAcentuado" placeholder="permissões">
+        </div>
+        <div class="grupo">
+          <label>Minúsculo Singular:</label>
+          <input spellcheck="false" type="text" id="minusculoSingular" placeholder="permissao">
+        </div>
+      </div>
+      <div class="linha">
+        <div class="grupo">
+          <label>Minúsculo Singular Acentuado:</label>
+          <input spellcheck="false" type="text" id="minusculosingularAcentuado" placeholder="permissão">
+        </div>
+        <div class="grupo">
+          <label>Título Plural:</label>
+          <input spellcheck="false" type="text" id="tituloPlural" placeholder="Permissoes">
+        </div>
+      </div>
+      <div class="linha">
+        <div class="grupo">
+          <label>Título Singular:</label>
+          <input spellcheck="false" type="text" id="tituloSingular" placeholder="Permissao">
+        </div>
+        <div class="grupo">
+          <label>Título Singular Acentuado: </label>
+          <input spellcheck="false" type="text" id="tituloSingularAcentuado" placeholder="Permissão">
+        </div>
       </div>
       <div class="grupo">
-        <label>Minúsculo Plural: </label>
-        <input type="text" id="minusculoPlural" placeholder="permissoes">
-      </div>
-      <div class="grupo">
-        <label>Minúsculo Plural Acentuado: </label>
-        <input type="text" id="minusculoPluralAcentuado" placeholder="permissões">
-      </div>
-      <div class="grupo">
-        <label>Minúsculo Singular: </label>
-        <input type="text" id="minusculoSingular" placeholder="permissao">
-      </div>
-      <div class="grupo">
-        <label>Minúsculo Singular Acentuado: </label>
-        <input type="text" id="minusculosingularAcentuado" placeholder="permissão">
-      </div>
-      <div class="grupo">
-        <label>Título Plural: </label>
-        <input type="text" id="tituloPlural" placeholder="Permissoes">
-      </div>
-      <div class="grupo">
-        <label>Título Singular: </label>
-        <input type="text" id="tituloSingular" placeholder="Permissao">
-      </div>
-      <div class="grupo">
-        <label>Título Singular Acentuado: </label>
-        <input type="text" id="tituloSingularAcentuado" placeholder="Permissão">
-      </div>
-      <div class="grupo">
-        <label>Artigo: </label>
-        <input type="text" id="artigo" placeholder="o">
+        <label>Artigo:</label>
+        <input spellcheck="false" type="text" id="artigo" placeholder="o">
       </div>
       <button type="button" id="gerar">Gerar</button>
-    </section>
+    </div>
+  </header>
 
-    <section id="resultados">
+  <section class="modal" id="resultados">
+    <div class="grupos">
       <div class="grupo">
         <label>Route</label>
-        <textarea id="route" spellcheck="false">
-          <pre></pre>
-        </textarea>
+        <textarea id="route" spellcheck="false"><pre></pre></textarea>
       </div>
       <div class="grupo">
         <label>Controller</label>
-        <textarea id="controller" spellcheck="false">
-          <pre></pre>
-        </textarea>
+        <textarea id="controller" spellcheck="false"><pre></pre></textarea>
       </div>
       <div class="grupo">
         <label>Repository</label>
-        <textarea id="repository" spellcheck="false">
-          <pre></pre>
-        </textarea>
+        <textarea id="repository" spellcheck="false"><pre></pre></textarea>
       </div>
-    </section>
-
-  </main>
+    </div>
+    <button id="fechar">Fechar Quadro</button>
+  </section>
 
   <!-- JS -->
   <script defer type="module" src="./assets/js/pages/index/index.js"></script>
